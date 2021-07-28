@@ -1,0 +1,180 @@
+.textaudio {
+  height: 400px;
+  margin-top: 10px;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.3);
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  display: none;
+  border-radius: 5px;
+  margin-bottom: -100px;
+}
+.But1,
+.But2 {
+  height: 150px;
+  width: 150px;
+  margin-left: 0%;
+  border-radius: 50%;
+  align-items: center;
+  text-align: center;
+
+  padding-top: 12%;
+}
+.But1 {
+  background-color: gold;
+}
+.But2 {
+  background-color: #9f94e0;
+  margin-left: -20px;
+}
+#but {
+  color: white;
+  font-size: 25px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+
+.textaudio:hover {
+  transition: 4s ease-in-out;
+  background-color: rgb(201, 165, 165);
+}
+.center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+}
+
+.communicate {
+  font-size: 30px;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+}
+#closebut {
+  margin-top: -10px;
+  font-weight: bold;
+  font-size: 28px;
+  color: red;
+  margin-right: -380px;
+}
+.twobuttons {
+  display: flex;
+}
+
+.But1:hover {
+  background-color: #9f94e0;
+  color: gold;
+  transition: 2s ease-in-out;
+}
+.But2:hover {
+  background-color: gold;
+  color: #9f94e0;
+  transition: 2s ease-in-out;
+}
+.overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.payment {
+  height: 450px;
+  width: 300px;
+}
+.payment h2 {
+  margin-top: 100px;
+}
+.black {
+  background-color: rgb(37, 32, 32);
+  color: white;
+}
+.white {
+  background-color: white;
+  color: black;
+}
+.black .payment {
+  color: white;
+}
+.black .payment p {
+  color: white;
+}
+.black .payment .button-plan {
+  background-color: white;
+  color: black;
+}
+.money {
+  color: red;
+  font-size: large;
+  font-size: 35px;
+  font-family: Montserrat, sans-serif;
+}
+
+.payment-wrap {
+  display: none;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.payment-wrap div {
+  justify-content: space-between;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+.close-payments {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 40px;
+  color: red;
+  font-weight: bolder;
+  margin-right: 50%;
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .textaudio {
+    height: 500px;
+    width: 300px;
+  }
+  #closebut {
+    font-size: 40px;
+    margin-left: 50%;
+    margin-right: -120px;
+  }
+  .communicate {
+    font-size: 26px;
+    margin-bottom: 50px;
+  }
+  #but {
+    font-size: 20px;
+    color: white;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-weight: bold;
+  }
+  .But1 .But2 {
+    padding-bottom: 20%;
+  }
+  .twobuttons {
+    margin-top: -30px;
+  }
+  .textaudio {
+    height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .textaudio {
+    height: 500px;
+    width: 250px;
+  }
+  #closebut {
+    margin-top: 5px;
+
+    font-size: 28px;
+    margin-left: 50%;
+    margin-right: 300px;
+  }
+}

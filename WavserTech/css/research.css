@@ -1,0 +1,220 @@
+.center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+}
+.research-program-button {
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background-color: #9f94e0;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: -25px;
+}
+.choosefile .fileside input {
+  color: #f00;
+  background: rgb(250, 249, 249);
+  width: 240px;
+}
+.choosefile .fileside button,
+.butts button {
+  color: rgb(250, 248, 248);
+  background: rgb(85, 3, 236);
+  border: 0px;
+  border-radius: 15px;
+  width: 120px;
+  height: 30px;
+  border: 2px solid #555;
+  margin: 5px;
+}
+
+div#out {
+  /*background: rgb(252, 250, 250);*/
+  width: 97%;
+  height: auto;
+  overflow: auto;
+  border: 2px solid #777;
+  border-radius: 10px;
+  color: #0bf;
+  font-size: 16px;
+  margin: 5px;
+  padding: 5px;
+}
+span.music {
+  position: absolute;
+  top: 16px;
+  color: #555;
+}
+span.music span {
+  color: #777;
+}
+.choosefile {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 5%;
+  margin-right: 2%;
+}
+.choosefile div {
+  margin-left: 5px;
+}
+
+.noteside {
+  width: 47%;
+}
+.separator-space {
+  height: auto;
+  width: 2px;
+
+  background-color: blue;
+}
+.fileside {
+  width: 47%;
+}
+@media (max-width: 760px) {
+  .fileside {
+    width: 100%;
+  }
+  .noteside {
+    width: 100%;
+  }
+  .separator-space {
+    display: none;
+  }
+}
+
+/*Footer of a book*/
+.foots-sections {
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.foots-sections div {
+  margin-left: 10%;
+}
+select option {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+select .blue {
+  width: 30px;
+  background-color: rgb(51, 6, 177);
+}
+select .red {
+  background-color: red;
+}
+select .green {
+  background-color: greenyellow;
+}
+select .yellow {
+  background-color: yellow;
+}
+
+/*Giving access to other locations*/
+.accessing-program {
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 2s ease-out;
+}
+
+.access {
+  width: 150px;
+  height: 200px;
+  margin-left: 5%;
+  margin-bottom: 3px;
+  padding: 1%;
+  border-radius: 10px;
+}
+.first-access,
+.third-access {
+  background-color: rgb(39, 34, 34);
+  color: white;
+}
+.second-access,
+.fourth-access {
+  background-color: white;
+}
+.access button {
+  background-color: gold;
+  border-radius: 15px;
+  width: 70%;
+  height: 30px;
+  color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  transition: all 1s ease-out;
+}
+.access button:hover {
+  background-color: #9f94e0;
+}
+.first-access p,
+.third-access p {
+  color: white;
+}
+.second-access p,
+.fourth-access p {
+  color: black;
+}
+
+/*Reserach programsd*/
+.lecture {
+  width: 120px;
+  height: 130px;
+  margin-left: 20px;
+}
+.inner-content {
+  width: 100px;
+  height: 100px;
+
+  margin: 5px;
+  background-color: red;
+}
+.research-activities {
+  margin-top: 30px;
+}
+.research-activities div {
+  margin-top: 1%;
+  margin-bottom: 20px;
+}
+.research h2 {
+  text-decoration: underline;
+  /*text-decoration-color: white;*/
+}
+#diff {
+  font-size: 70px;
+  color: white;
+  margin-top: 10%;
+}
+.book1 {
+  border: none;
+}
+.research-lecturers a h4 {
+  font-weight: lighter;
+  font-size: 16px;
+}
+.reduce .create-rect {
+  margin-left: 2%;
+}
+.research h2 {
+  margin-left: 5%;
+}
+.discussion-table-link {
+  font-size: 24px;
+}
+.upper-bound {
+  margin-left: 30%;
+}
+@media (max-width: 800px) {
+  .upper-bound {
+    margin-left: 10%;
+  }
+}
+@media (max-width: 500px) {
+  .upper-bound {
+    margin-left: 5%;
+  }
+}

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Sutie</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/jpg" href="images/icons/gavel2.jpg"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="logo.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css">
+<!--===============================================================================================-->
+<script>
+		var know = {
+			"hello":"hi",
+			"how are you?":"good",
+			"ok":":)",
+			"Hello":"hi",
+			"How are you?":"good",
+			"What is the fine for overspeeding?":"I don't know that yet",
+			"What is a heavy commercial vehicle":"heavy commercial vehicle means a commercial vehicle whose tareweight exceeds six thousand seven hundred and twenty pounds",
+			"What is a driving license":"driving licence means a licence to drive a motor vehicle issued under this Act, and any document deemed to be a driving licence by any rules made under this Act",
+			"What is a matatu":"matatu means a public service vehicle having a seating accommodation for not more than twenty-five passengers exclusive of the driver, but does not include a motor-car",
+			"Who is the owner of a vehicle":"The person in whose name a vehicle is registered shall, unless the contrary is proved, be deemed to be the owner of the vehicle.",
+			"What is the law on licenses":"(1) No person shall drive a motor vehicle of any class on a road unless he is the holder of a valid driving licence or a provisional licence endorsed in respect of that class of vehicle. (2) No person who owns or who has charge of a motor vehicle of any class shall cause or permit any person to drive such motor vehicle unless such person is the holder of a valid driving licence or a valid provisional licence endorsed in respect of that class of motor vehicle. (3) No person shall be entitled to more than one driving licence, but a driving licence may be endorsed to permit the holder to drive one or more classes of motor vehicle. (4) Driving licences shall be issued, and upon expiry renewed on production, by a licensing officer upon payment of the prescribed fee, and a driving licence so issued or renewed may be expressed to be valid for a period of three years, from the date of issue or renewal. (5) In the event of any change of circumstances which affects the accuracy of any particulars declared under paragraph (b) of subsection (1) of section 31, 				which would operate to prevent the grant of a driving licence under that section, the holder of the driving licence shall forthwith inform the Authority of the change. (6) A driver of a public service vehicle or a commercial vehicle shall be required to undergo every three years a driving test under section 39 successfully as a				condition for each renewal of the licence. (7) Any person who contravenes or fails to comply with this section shall be 				guilty of an offence and liable—(a) on first conviction to a fine not exceeding twenty thousand shillings or 				to imprisonment for a term not exceeding three months; and 	(b) on each subsequent conviction to a fine not exceeding thirty thousand shillings or to imprisonment for a term not exceeding six months or to both such fine and imprisonment.",
+			"Can I drive a car without a license":"No vehicle which is required to be licensed shall be used on a road unless the licence, which shall be legible and in no way defaced, is carried on the vehicle in the prescribed manner.",
+			"What age can someone not get a driving license":"(1) No driving licence or provisional licence shall be granted to any person—(a) under the age of sixteen years; (b) under the age of eighteen years, except in respect of motorcycles; or (c) endorsed in respect of matatus and motor-omnibuses, unless he— (i) is over the age of twenty-four years; and (ii) has for not less than four years held a licence endorsed in respect of motor-cars or commercial vehicles: "
+
+			
+		};
+
+		function talk(){
+			var user = document.getElementById("userBox").value;
+			document.getElementById("userBox").value="";
+			document.getElementById("chatlog").innerHTML += user +"<br>";
+			if(user in know){
+				document.getElementById("chatlog").innerHTML += know[user]+"<br>";
+
+			}else{
+				document.getElementById("chatlog").innerHTML +="I don't understand...<br>";
+
+			}
+
+		}
+	</script>
+</head>
+<body class="animsition">
+
+	<!-- Header -->
+	<header>
+		<!-- Header desktop -->
+
+		<div class="wrap-menu-header gradient1 trans-0-4">
+			<div class="container h-full">
+				<div class="wrap_header trans-0-3">
+					<!-- **kindly change the logo** -->
+					<div class="logo">
+						<a href="index.html">
+							<img src="images/icons/gavel2.JPG">
+						</a>
+					</div>
+
+					<!-- Menu -->
+					<div class="wrap_menu p-l-45 p-l-0-xl ">
+						<nav class="menu">
+							<ul class="main_menu">
+								<li>
+									
+									<a href="index.html" class="c-white"><i class="fa-size fa fa-home" aria-hidden="true"></i></a>
+								</li>
+
+								<li>
+									
+									<a href="laws.html" class="c-white"><i class="fa-size fa fa-gavel" aria-hidden="true"></i></a>
+								</li>
+							
+								<li>
+									
+									<a href="about.html" class="c-white"><i class="fa-size fa fa-info-circle" aria-hidden="true"></i></a>
+								</li>
+
+								<!--<li>
+									<a href="blog.html">Country</a>
+									<a href="index.html" class="c-white"><i class="fa-size fa fa-home" aria-hidden="true"></i></a>
+								</li>-->
+
+								<li>
+								
+									<a href="#contact-us" class="c-white"><i class="fa-size fa fa-address-book-o" aria-hidden="true"></i></a>
+								</li>
+
+								<li>
+									
+									<a href="register.html" class="c-white"><i class="fa-size fa fa-sign-in" aria-hidden="true"></i></a>
+								</li>
+								
+							</ul>
+						</nav>
+					</div>
+
+					<!-- Social -->
+					<div class="social flex-w flex-l-m p-r-20">
+						<a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-facebook m-l-21" aria-hidden="true"></i></a>
+						<a href="#"><i class="fa fa-twitter m-l-21" aria-hidden="true"></i></a>
+
+						<button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Sidebar -->
+	<aside class="sidebar trans-0-4">
+		<!-- Button Hide sidebar -->
+		<button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
+
+		<!-- - -->
+		<ul class="menu-sidebar p-t-95 p-b-70">
+			
+			<li class="t-center m-b-13">
+				<a href="index.html" class="txt19">Home</a>
+			</li>
+			<li class="t-center m-b-13">
+				<a href="laws.html" class= "txt19">Laws</a>
+
+			</li>
+
+			<li class="t-center m-b-33">
+				<a href="language.html" class="txt19">Language</a>
+			</li>
+
+			<li class="t-center m-b-33">
+				<a href="contact.html" class="txt19">Contact</a>
+			</li>
+			<li class = "t-center m-b-33">
+				<a href = "formname.php" class ="txt19">Sign Up</a>
+			</li>
+
+			
+		</ul>
+
+		<!-- - -->
+		<div class="gallery-sidebar t-center p-l-60 p-r-60 p-b-40">
+			<!-- - -->
+			<h4 class="txt20 m-b-33">
+				Constitutions
+			</h4>
+
+			<!-- Gallery -->
+			<div class="wrap-gallery-sidebar flex-w">
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-01.jpg" data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-01.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-02.jpg" data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-02.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-03.jpg" data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-03.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-05.jpg" data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-05.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-06.jpg" data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-06.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-07.jpg" data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-07.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-09.jpg" data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-09.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-10.jpg" data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-10.jpg" alt="GALLERY">
+				</a>
+
+				<a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-11.jpg" data-lightbox="gallery-footer">
+					<img src="images/photo-gallery-thumb-11.jpg" alt="GALLERY">
+				</a>
+			</div>
+		</div>
+	</aside>
+
+	<!-- Slide1 -->
+	<section class="section-slide">
+		<div class="wrap-slick1">
+			<div class="slick1">
+				<div class="item-slick1 item1-slick1" style="background-image: url(images/welcom.jpg);">
+					
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+							Welcome to
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+							Sutie
+						</h2>
+
+						<div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
+							<!-- Button1 -->
+						
+							<a href="#" class="btn1 flex-c-m size1 txt3 trans-0-4" id="open-button">
+								Hello, ask me anything.
+							</a>
+					
+						</div>
+					
+					<!--Popup of Audio or Text-->
+					<div id = "textaudio" class = "textaudio center ">
+						<button data-close-button type = "button" class = "close-button" id = "closebut">&times;</button>
+						<div class = "minorhead"><h3 class = "communicate ">Communicate through?</h3>
+							
+						</div>
+						
+						<div class = "twobuttons center">
+							<div class="But1"> <a href="chatt.html" id="but" class="textbutton">Text</a></div>
+							<div class="But2"> <a href="chatt.html" id="but" class="audiobutton">Audio<br><div class=" fa fas fa-microphone m-l-18 "></div>
+							</a></div>
+						</div>
+					</div>
+                    
+						
+					</div>
+				</div>
+
+				<div class="item-slick1 item1-slick1" style="background-image: url(images/library1.jfif);" id="library" >
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+							Welcome to
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+							Library
+						</h2>
+
+
+						<div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
+							<!-- Button1 -->
+						
+						
+					
+						</div>
+					
+					<!--Popup of Audio or Text-->
+				
+                   </div>
+				</div>
+				<div class="item-slick1 item1-slick1" style="background-image: url(images/WlcomeScissors.jpg);" id="documents">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" style="color:black" data-appear="fadeInDown">
+							Get Usefull
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" style="color:black"  data-appear="fadeInUp">
+							Documents
+						</h2>
+
+
+						<div class="wrap-btn-slide1 animated visible-false" data-appear="zoomIn">
+							<!-- Button1 -->
+						</div>
+					
+					
+                    
+						
+					</div>
+				</div>
+
+				<div class="item-slick1 item1-slick1" style="background-image: url(images/bb7211df-afe4-41d1-8a6e-b3d70d872866.jfif);" id="research">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						
+                   						
+					</div>
+				</div>
+				<div class="item-slick1 item2-slick1" style="background-image: url(images/parliament.jfif);" id="parliament">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
+							Engage the 
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
+							parliament
+						</h2>
+					</div>
+				</div>
+
+				<div class="item-slick1 item3-slick1" style="background-image: url(images/gavel.gif);" id="playing">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
+							Feel like
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
+							Playing?
+						</h2>
+
+					</div>
+				</div>
+
+				<div class="item-slick1 item2-slick1" style="background-image: url(images/kiongozi4.jfif);" id="kiongozi" >
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn" style="color:black">
+							know your
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn" style="color:black">
+							kiongozi
+						</h2>
+
+					</div>
+				</div>
+
+
+				<div class="item-slick1 item2-slick1" style="background-image: url(images/visualize.jpg);" id="visualize">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
+							Visualize the
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
+							law
+						</h2>
+
+					</div>
+				</div>
+
+
+				<div class="item-slick1 item2-slick1" style="background-image: url(images/kiongozi.jpg);" id="savanna">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
+							Hi Iam Savanna.                                    
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
+							Your virtual lawyer
+						</h2>
+					</div>
+				</div>
+
+				<div class="item-slick1 item2-slick1" style="background-image: url(images/lawupdown.jfif);" id="lawyer">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn" style="color:#FFD700">
+							Lawyer 
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn" style="color: #FFD700">
+							up and down
+						</h2>
+					</div>
+				</div>
+
+				<div class="item-slick1 item2-slick1" style="background-image: url(images/islam23.jpg);" id="islamic">
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<span class="caption1-slide1 txt1 t-center animated visible-false m-b-15" data-appear="rollIn">
+							Welcome to 
+						</span>
+
+						<h2 class="caption2-slide1 tit1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
+							Islamic Shariah
+						</h2>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="wrap-slick1-dots"></div>
+		</div>
+	</section>
+
+	<section class="section-welcome bg1-pattern p-t-120 p-b-105 bg-white">
+		<div class="chatbot">
+			<p id ="chatlog">Hi, how may I help?<br></p>
+			<input id= "userBox" type= "text" onkeydown= "if (event.keyCode == 13) {talk()}">
+		</div>
+	</section>
+
+	<!-- Welcome -->
+	<section class="section-welcome bg1-pattern p-t-120 p-b-105 bg-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 p-t-45 p-b-30">
+					<div class="wrap-text-welcome t-center">
+						<span class="tit2 t-center">
+							Sutie
+						</span>
+
+						<h3 class="tit3 t-center m-b-35 m-t-5">
+							Did you know?
+						</h3>
+
+						<p class="t-center m-b-22 size3 m-l-r-auto">
+							The law of road in Kenya says that you should always keep left.
+						</p>
+
+						<a href="https://www.shulefiti.co.ke/ntsa-documents" class="txt4">
+							Want to learn more?
+							<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+
+				<div class="col-md-6 p-b-30">
+					<div class="wrap-pic-welcome size2 bo-rad-10 hov-img-zoom m-l-r-auto">
+						<img src="images/weights.jpg" alt="IMG-OUR">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<!-- Intro -->
+	<section class="section-intro">
+		<div class="header-intro parallax100 t-center p-t-135 p-b-158" style="background-image: url(images/das.jpg);">
+			<span class="tit2 p-l-15 p-r-15">
+				Discover
+			</span>
+
+			<h3 class="tit4 t-center p-l-15 p-r-15 p-t-3">
+			Sutie
+			</h3>
+
+		</div>
+
+		<div class="content-intro bg-white p-t-77 p-b-133 ">
+			<div class="container center">
+				<button class="label-gallery txt26 trans-0-4" data-filter=".food" style="font-size: 40px;">
+					KENYAN LAW
+				</button>
+				<div class="row">
+					<div class="col-md-4 p-t-30">
+						<!-- Block1 -->
+						
+						<div class="blo1">
+							
+							<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
+								<a href="https://www.constituteproject.org/constitution/Kenya_2010.pdf"><img src="images/consti.jpg" alt="IMG-INTRO"></a>
+							</div>
+
+							<div class="wrap-text-blo1 p-t-35">
+								<a href="https://www.constituteproject.org/constitution/Kenya_2010.pdf"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
+									Kenyan Constitution
+								</h4></a>
+
+								<p class="m-b-20">
+									The Kenyan constitution ammended on 2010.
+								</p>
+
+								<a href="https://www.constituteproject.org/constitution/Kenya_2010.pdf" class="txt4">
+									Learn More
+									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 p-t-30">
+						<!-- Block1 -->
+						<div class="blo1">
+							<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
+								<a href="https://www.bbi.go.ke/post/bbi-report-october-2020#:~:text=%20Notable%20Issues%20In%20The%20BBI%20Report%202020,what%2C%20when%2C%20how%E2%80%99%2C%20as%20defined%20by...%20More%20"><img src="images/bbi23.jpg" alt="IMG-INTRO"></a>
+							</div>
+
+							<div class="wrap-text-blo1 p-t-35">
+								<a href="https://www.bbi.go.ke/post/bbi-report-october-2020#:~:text=%20Notable%20Issues%20In%20The%20BBI%20Report%202020,what%2C%20when%2C%20how%E2%80%99%2C%20as%20defined%20by...%20More%20"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
+									BBI Report
+								</h4></a>
+
+								<p class="m-b-20">
+									Building Bridges Initiative
+								</p>
+
+								<a href="https://www.bbi.go.ke/post/bbi-report-october-2020#:~:text=%20Notable%20Issues%20In%20The%20BBI%20Report%202020,what%2C%20when%2C%20how%E2%80%99%2C%20as%20defined%20by...%20More%20" class="txt4">
+									Learn More
+									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 p-t-30">
+						<!-- Block1 -->
+						<div class="blo1">
+							<div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
+								<a href="https://www.shulefiti.co.ke/ntsa-documents"><img src="images/ntsahandbook.jpg" alt="IMG-INTRO"></a>
+							</div>
+
+							<div class="wrap-text-blo1 p-t-35">
+								<a href="https://www.shulefiti.co.ke/ntsa-documents"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
+									The Traffic Law
+								</h4></a>
+
+								<p class="m-b-20">
+									The NTSA approved road rules
+								</p>
+
+								<a href="https://www.shulefiti.co.ke/ntsa-documents" class="txt4">
+									Learn More
+									<i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Our menu -->
+	<section class="section-ourmenu bg2-pattern p-t-115 p-b-120 bg-white">
+		<div class="container">
+			<div class="title-section-ourmenu t-center m-b-22">
+				<span class="tit2 t-center">
+					Discover
+				</span>
+
+				<h3 class="tit5 t-center m-t-2">
+					Our Range
+				</h3>
+			</div>
+
+			<div class="row">
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-sm-6">
+							<!-- Item our menu -->
+							<div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
+								<img src="images/webhost.jpg" alt="IMG-MENU">
+
+								<!-- Button2 -->
+								<a href="menu.html" class="btn2 flex-c-m txt5 ab-c-m size4">
+									Web Applications
+								</a>
+							</div>
+						</div>
+
+						<div class="col-sm-6">
+							<!-- Item our menu -->
+							<div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
+								<img src="images/appdev.jpg" alt="IMG-MENU">
+
+								<!-- Button2 -->
+								<a href="menu.html" class="btn2 flex-c-m txt5 ab-c-m size5">
+									Mobile Applications
+								</a>
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="row">
+						<div class="col-12">
+							<!-- Item our menu -->
+							<div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
+								<img src="images/gamer.jpg" alt="IMG-MENU">
+
+								<!-- Button2 -->
+								<a href="" class="btn2 flex-c-m txt5 ab-c-m size7">
+									Games
+								</a>
+							</div>
+						</div>
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	
+
+	<!-- Review -->
+	<section class="section-review p-t-115 review-bg">
+		<!-- - -->
+		<div class="title-review t-center m-b-2">
+			<span class="tit2 p-l-15 p-r-15">
+				The Developers' Say
+			</span>
+
+			<h3 class="tit8 t-center p-l-20 p-r-15 p-t-3">
+				Review
+			</h3>
+		</div>
+
+		<!-- - -->
+		<div class="wrap-slick3">
+			<div class="slick3">
+				<div class="item-slick3 item1-slick3">
+					<div class="wrap-content-slide3 p-b-50 p-t-50">
+						<div class="container">
+							<div class="pic-review size14 bo4 wrap-cir-pic m-l-r-auto animated visible-false" data-appear="zoomIn">
+								<img src="images/positive-negative-risk.jpg" alt="IGM-AVATAR">
+							</div>
+
+							<div class="content-review m-t-33 animated visible-false" data-appear="fadeInUp">
+								<p class="t-center txt12 size15 m-l-r-auto">
+									
+								</p>
+
+								<div class="star-review fs-18 color0 flex-c-m m-t-12">
+									<i class="fa fa-star" aria-hidden="true"></i>
+									<i class="fa fa-star p-l-1" aria-hidden="true"></i>
+									<i class="fa fa-star p-l-1" aria-hidden="true"></i>
+									<i class="fa fa-star p-l-1" aria-hidden="true"></i>
+									<i class="fa fa-star p-l-1" aria-hidden="true"></i>
+								</div>
+
+								<div class="more-review txt4 t-center animated visible-false m-t-32" data-appear="fadeInUp">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item-slick3 item2-slick3">
+					<div class="wrap-content-slide3 p-b-50 p-t-50">
+						<div class="container">
+							<div class="pic-review size14 bo4 wrap-cir-pic m-l-r-auto animated visible-false" data-appear="zoomIn">
+								<img src="images/rate.jpg" alt="IGM-AVATAR">
+							</div>
+
+							<div class="content-review m-t-33 animated visible-false" data-appear="fadeInUp">
+								<p class="t-center txt12 size15 m-l-r-auto">
+									
+								</p>
+
+								<div class="star-review fs-18 color0 flex-c-m m-t-12">
+									<i class="fa fa-star" aria-hidden="true"></i>
+									<i class="fa fa-star p-l-1" aria-hidden="true"></i>
+									<i class="fa fa-star p-l-1" aria-hidden="true"></i>
+									<i class="fa fa-star p-l-1" aria-hidden="true"></i>
+									<i class="fa fa-star p-l-1" aria-hidden="true"></i>
+								</div>
+
+								<div class="more-review txt4 t-center animated visible-false m-t-32" data-appear="fadeInUp">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item-slick3 item3-slick3">
+					<div class="wrap-content-slide3 p-b-50 p-t-50">
+						<div class="container">
+							<div class="pic-review size14 bo4 wrap-cir-pic m-l-r-auto animated visible-false" data-appear="zoomIn">
+								<img src="images/reviews.jpg" alt="IGM-AVATAR">
+							</div>
+
+							<div class="content-review m-t-33 animated visible-false" data-appear="fadeInUp">
+								<p class="t-center txt12 size15 m-l-r-auto">
+									
+								</p>
+
+								<div class="star-review fs-18 color0 flex-c-m m-t-12">
+									<i class="fa fa-star" aria-hidden="true"></i>
+									<i class="fa fa-star p-l-1" aria-hidden="true"></i>
+									<i class="fa fa-star p-l-1" aria-hidden="true"></i>
+									<i class="fa fa-star p-l-1" aria-hidden="true"></i>
+									<i class="fa fa-star p-l-1" aria-hidden="true"></i>
+								</div>
+
+								<div class="more-review txt4 t-center animated visible-false m-t-32" data-appear="fadeInUp">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="wrap-slick3-dots m-t-30"></div>
+		</div>
+	</section>
+
+
+	<!-- Blog -->
+	
+
+
+	
+
+
+	<!-- Footer -->
+	<footer class="bg1">
+		<div class="container p-t-40 p-b-70">
+			<div class="row">
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<!-- - -->
+					<h4 class="txt13 m-b-33" id="contact-us">
+						Contact Us
+					</h4>
+
+					<ul class="m-b-70">
+						<li class="txt14 m-b-14">
+							<i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i>
+							
+						</li>
+
+						<li class="txt14 m-b-14">
+							<i class="fa fa-phone fs-16 dis-inline-block size19" aria-hidden="true"></i>
+							+254 7453 98790
+						</li>
+
+						<li class="txt14 m-b-14">
+							<i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
+							sutie.com
+						</li>
+					</ul>
+
+					<!-- - -->
+					<h4 class="txt13 m-b-32">
+						Opening Times
+					</h4>
+
+					<ul>
+						<li class="txt14">
+							09:30 AM – 5:00 PM
+						</li>
+
+						<li class="txt14">
+							Every Day
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<!-- - -->
+					<h4 class="txt13 m-b-33">
+						Latest twitter
+					</h4>
+
+					<div class="m-b-25">
+						<span class="fs-13 color2 m-r-5">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</span>
+						<a href="#" class="txt15">
+							
+						</a>
+
+						
+
+						<span class="txt16">
+							
+						</span>
+					</div>
+
+					<div>
+						<span class="fs-13 color2 m-r-5">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</span>
+						<a href="#" class="txt15">
+							
+						</a>
+
+						
+
+						<span class="txt16">
+							21 June 2020
+						</span>
+					</div>
+				</div>
+
+				<div class="col-sm-6 col-md-4 p-t-50">
+					<!-- - -->
+					<h4 class="txt13 m-b-38">
+						Gallery
+					</h4>
+
+					<!-- Gallery footer -->
+					<div class="wrap-gallery-footer flex-w">
+						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-01.jpg" data-lightbox="gallery-footer">
+							<img src="images/photo-gallery-thumb-01.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-02.jpg" data-lightbox="gallery-footer">
+							<img src="images/photo-gallery-thumb-02.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-03.jpg" data-lightbox="gallery-footer">
+							<img src="images/photo-gallery-thumb-03.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-04.jpg" data-lightbox="gallery-footer">
+							<img src="images/photo-gallery-thumb-04.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-05.jpg" data-lightbox="gallery-footer">
+							<img src="images/photo-gallery-thumb-05.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-06.jpg" data-lightbox="gallery-footer">
+							<img src="images/photo-gallery-thumb-06.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-07.jpg" data-lightbox="gallery-footer">
+							<img src="images/photo-gallery-thumb-07.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-08.jpg" data-lightbox="gallery-footer">
+							<img src="images/photo-gallery-thumb-08.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-09.jpg" data-lightbox="gallery-footer">
+							<img src="images/photo-gallery-thumb-09.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-10.jpg" data-lightbox="gallery-footer">
+							<img src="images/photo-gallery-thumb-10.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-11.jpg" data-lightbox="gallery-footer">
+							<img src="images/photo-gallery-thumb-11.jpg" alt="GALLERY">
+						</a>
+
+						<a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-12.jpg" data-lightbox="gallery-footer">
+							<img src="images/photo-gallery-thumb-12.jpg" alt="GALLERY">
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="end-footer bg2">
+			<div class="container">
+				<div class="flex-sb-m flex-w p-t-22 p-b-22">
+					<div class="p-t-5 p-b-5">
+						<a href="tripadvisor.com" class="fs-15 c-white"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+						<a href="facebook.com" class="fs-15 c-white"><i class="fa fa-facebook m-l-18" aria-hidden="true"></i></a>
+						<a href="twitter.com" class="fs-15 c-white"><i class="fa fa-twitter m-l-18" aria-hidden="true"></i></a>
+					</div>
+
+					<div class="txt17 p-r-20 p-t-5 p-b-5">
+						Copyright &copy; 2020 All rights reserved  <i class="fa fa-heart"></i> by <a href="https://colorlib.com" target="_blank">Sutie</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- Back to top -->
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+	<!-- Container Selection1 -->
+	<div id="dropDownSelect1"></div>
+
+	<!-- Modal Video 01-->
+	<div class="modal fade" id="modal-video-01" tabindex="-1" role="dialog" aria-hidden="true">
+
+		<div class="modal-dialog" role="document" data-dismiss="modal">
+			<div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
+
+			<div class="wrap-video-mo-01">
+				<div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
+				<div class="video-mo-01">
+					<iframe src="https://www.youtube.com/embed/5k1hSu2gdKE?rel=0&amp;showinfo=0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--===============================================================================================-->
+    <script type="text/javascript">
+
+document.getElementById("library").addEventListener('click', function(){
+window.open("library.html","_self")
+});
+document.getElementById("research").addEventListener('click', function(){
+window.open("research.html", "_self")
+});
+document.getElementById("visualize").addEventListener('click', function(){
+window.open("visualize.html", "_self")
+});
+document.getElementById("lawyer").addEventListener('click', function(){
+window.open("lawyers.html", "_self")
+});
+document.getElementById("parliament").addEventListener('click', function(){
+window.open("parliament.html", "_self")
+});
+document.getElementById("islamic").addEventListener('click', function(){
+window.open("islam.html", "_self")
+});
+document.getElementById("kiongozi", "_self").addEventListener('click', function(){
+window.open("kiongozi.html")
+});
+document.getElementById("savanna", "_self").addEventListener('click', function(){
+window.open("savanah.html")
+});
+document.getElementById("documents").addEventListener('click', function(){
+window.open("document.html", "_self")
+});
+document.getElementById("playing").addEventListener('click', function(){
+window.open("games.html", "_self")
+});
+
+	</script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/daterangepicker/moment.min.js"></script>
+	<script type="text/javascript" src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/slick-custom.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/parallax100/parallax100.js"></script>
+	<script type="text/javascript">
+        $('.parallax100').parallax100();
+	</script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

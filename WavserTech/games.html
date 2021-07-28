@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sutie</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/jpg" href="images/icons/gavel2.jpg" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="logo.css">
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
+    <!--===============================================================================================-->
+    <script>
+        var know = {
+            "hello": "hi",
+            "how are you?": "good",
+            "ok": ":)",
+            "Hello": "hi",
+            "How are you?": "good",
+            "What is the fine for overspeeding?": "I don't know that yet",
+            "What is a heavy commercial vehicle": "heavy commercial vehicle means a commercial vehicle whose tareweight exceeds six thousand seven hundred and twenty pounds",
+            "What is a driving license": "driving licence means a licence to drive a motor vehicle issued under this Act, and any document deemed to be a driving licence by any rules made under this Act",
+            "What is a matatu": "matatu means a public service vehicle having a seating accommodation for not more than twenty-five passengers exclusive of the driver, but does not include a motor-car",
+            "Who is the owner of a vehicle": "The person in whose name a vehicle is registered shall, unless the contrary is proved, be deemed to be the owner of the vehicle.",
+            "What is the law on licenses": "(1) No person shall drive a motor vehicle of any class on a road unless he is the holder of a valid driving licence or a provisional licence endorsed in respect of that class of vehicle. (2) No person who owns or who has charge of a motor vehicle of any class shall cause or permit any person to drive such motor vehicle unless such person is the holder of a valid driving licence or a valid provisional licence endorsed in respect of that class of motor vehicle. (3) No person shall be entitled to more than one driving licence, but a driving licence may be endorsed to permit the holder to drive one or more classes of motor vehicle. (4) Driving licences shall be issued, and upon expiry renewed on production, by a licensing officer upon payment of the prescribed fee, and a driving licence so issued or renewed may be expressed to be valid for a period of three years, from the date of issue or renewal. (5) In the event of any change of circumstances which affects the accuracy of any particulars declared under paragraph (b) of subsection (1) of section 31, 				which would operate to prevent the grant of a driving licence under that section, the holder of the driving licence shall forthwith inform the Authority of the change. (6) A driver of a public service vehicle or a commercial vehicle shall be required to undergo every three years a driving test under section 39 successfully as a				condition for each renewal of the licence. (7) Any person who contravenes or fails to comply with this section shall be 				guilty of an offence and liable—(a) on first conviction to a fine not exceeding twenty thousand shillings or 				to imprisonment for a term not exceeding three months; and 	(b) on each subsequent conviction to a fine not exceeding thirty thousand shillings or to imprisonment for a term not exceeding six months or to both such fine and imprisonment.",
+            "Can I drive a car without a license": "No vehicle which is required to be licensed shall be used on a road unless the licence, which shall be legible and in no way defaced, is carried on the vehicle in the prescribed manner.",
+            "What age can someone not get a driving license": "(1) No driving licence or provisional licence shall be granted to any person—(a) under the age of sixteen years; (b) under the age of eighteen years, except in respect of motorcycles; or (c) endorsed in respect of matatus and motor-omnibuses, unless he— (i) is over the age of twenty-four years; and (ii) has for not less than four years held a licence endorsed in respect of motor-cars or commercial vehicles: "
+
+
+        };
+
+        function talk() {
+            var user = document.getElementById("userBox").value;
+            document.getElementById("userBox").value = "";
+            document.getElementById("chatlog").innerHTML += user + "<br>";
+            if (user in know) {
+                document.getElementById("chatlog").innerHTML += know[user] + "<br>";
+
+            } else {
+                document.getElementById("chatlog").innerHTML += "I don't understand...<br>";
+
+            }
+
+        }
+    </script>
+</head>
+
+<body class="animsition">
+
+    <!-- Header -->
+    <header>
+        <!-- Header desktop -->
+
+        <div class="wrap-menu-header gradient1 trans-0-4">
+            <div class="container h-full">
+                <div class="wrap_header trans-0-3">
+                    <!-- **kindly change the logo** -->
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="images/icons/gavel2.JPG">
+                        </a>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="wrap_menu p-l-45 p-l-0-xl ">
+                        <nav class="menu">
+                            <ul class="main_menu">
+                                <li>
+
+                                    <a href="index.html" class="c-white"><i class="fa-size fa fa-home"
+                                            aria-hidden="true"></i></a>
+                                </li>
+
+                                <li>
+
+                                    <a href="laws.html" class="c-white"><i class="fa-size fa fa-gavel"
+                                            aria-hidden="true"></i></a>
+                                </li>
+
+                                <li>
+
+                                    <a href="about.html" class="c-white"><i class="fa-size fa fa-info-circle"
+                                            aria-hidden="true"></i></a>
+                                </li>
+
+                                <!--<li>
+									<a href="blog.html">Country</a>
+									<a href="index.html" class="c-white"><i class="fa-size fa fa-home" aria-hidden="true"></i></a>
+								</li>-->
+
+                                <li>
+
+                                    <a href="#contact-us" class="c-white"><i class="fa-size fa fa-address-book-o"
+                                            aria-hidden="true"></i></a>
+                                </li>
+
+                                <li>
+
+                                    <a href="register.html" class="c-white"><i class="fa-size fa fa-sign-in"
+                                            aria-hidden="true"></i></a>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- Social -->
+                    <div class="social flex-w flex-l-m p-r-20">
+                        <a href="#"><i class="fa fa-tripadvisor" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-facebook m-l-21" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter m-l-21" aria-hidden="true"></i></a>
+
+                        <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar trans-0-4">
+        <!-- Button Hide sidebar -->
+        <button class="btn-hide-sidebar ti-close color0-hov trans-0-4"></button>
+
+        <!-- - -->
+        <ul class="menu-sidebar p-t-95 p-b-70">
+
+            <li class="t-center m-b-13">
+                <a href="index.html" class="txt19">Home</a>
+            </li>
+            <li class="t-center m-b-13">
+                <a href="laws.html" class="txt19">Laws</a>
+
+            </li>
+
+            <li class="t-center m-b-33">
+                <a href="language.html" class="txt19">Language</a>
+            </li>
+
+            <li class="t-center m-b-33">
+                <a href="contact.html" class="txt19">Contact</a>
+            </li>
+            <li class="t-center m-b-33">
+                <a href="formname.php" class="txt19">Sign Up</a>
+            </li>
+
+
+        </ul>
+
+        <!-- - -->
+        <div class="gallery-sidebar t-center p-l-60 p-r-60 p-b-40">
+            <!-- - -->
+            <h4 class="txt20 m-b-33">
+                Constitutions
+            </h4>
+
+            <!-- Gallery -->
+            <div class="wrap-gallery-sidebar flex-w">
+                <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-01.jpg"
+                    data-lightbox="gallery-footer">
+                    <img src="images/photo-gallery-thumb-01.jpg" alt="GALLERY">
+                </a>
+
+                <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-02.jpg"
+                    data-lightbox="gallery-footer">
+                    <img src="images/photo-gallery-thumb-02.jpg" alt="GALLERY">
+                </a>
+
+                <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-03.jpg"
+                    data-lightbox="gallery-footer">
+                    <img src="images/photo-gallery-thumb-03.jpg" alt="GALLERY">
+                </a>
+
+                <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-05.jpg"
+                    data-lightbox="gallery-footer">
+                    <img src="images/photo-gallery-thumb-05.jpg" alt="GALLERY">
+                </a>
+
+                <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-06.jpg"
+                    data-lightbox="gallery-footer">
+                    <img src="images/photo-gallery-thumb-06.jpg" alt="GALLERY">
+                </a>
+
+                <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-07.jpg"
+                    data-lightbox="gallery-footer">
+                    <img src="images/photo-gallery-thumb-07.jpg" alt="GALLERY">
+                </a>
+
+                <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-09.jpg"
+                    data-lightbox="gallery-footer">
+                    <img src="images/photo-gallery-thumb-09.jpg" alt="GALLERY">
+                </a>
+
+                <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-10.jpg"
+                    data-lightbox="gallery-footer">
+                    <img src="images/photo-gallery-thumb-10.jpg" alt="GALLERY">
+                </a>
+
+                <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-11.jpg"
+                    data-lightbox="gallery-footer">
+                    <img src="images/photo-gallery-thumb-11.jpg" alt="GALLERY">
+                </a>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- Title Page -->
+    <section class="item-slick1 item2-slick1" style="background-image: url(images/gavel.gif);">
+    </section>
+
+    <section class="section-blog bg-white p-t-115 p-b-123">
+        <div class="container" id="game">
+            <div class="title-section-ourmenu t-center m-b-22">
+                <span class="tit2 t-center">
+                    Have some time?
+                </span>
+    
+                <h3 class="tit5 t-center m-t-2">
+                    The Games
+                </h3>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-4 p-t-30">
+                    <!-- Block1 -->
+                    <div class="blo1">
+                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+                            <a href="blog-detail.html"><img height="275px" src="images/carmoving.gif" alt="IMG-INTRO"></a>
+    
+                            <div class="time-blog">
+    
+                            </div>
+                        </div>
+    
+                        <div class="wrap-text-blo1 p-t-35">
+                            <a href="blog-detail.html">
+                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                                    Drunk Driver
+                                </h4>
+                            </a>
+    
+                            <p class="m-b-20">
+                                You think driving while drunk is a game then try and see how far you reach without crashing.
+                            </p>
+    
+                            <a href="blog-detail.html" class="txt4">
+                                Continue
+                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 p-t-30">
+                    <!-- Block1 -->
+                    <div class="blo1">
+                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+                            <a href="blog-detail.html"><img src="images/QuestionAndAnswer.gif" alt="IMG-INTRO"></a>
+    
+                            <div class="time-blog">
+    
+                            </div>
+                        </div>
+    
+                        <div class="wrap-text-blo1 p-t-35">
+                            <a href="blog-detail.html">
+                                <h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                                    Gavel this
+                                </h4>
+                            </a>
+    
+                            <p class="m-b-20">
+                                Answer the hardest and witty that make a good lawyer and judge and get the feeling of
+                                handling a case in a court of law.
+                            </p>
+    
+                            <a href="blog-detail.html" class="txt4">
+                                Continue
+                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+    
+    
+            </div>
+    
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg1">
+        <div class="container p-t-40 p-b-70">
+            <div class="row">
+                <div class="col-sm-6 col-md-4 p-t-50">
+                    <!-- - -->
+                    <h4 class="txt13 m-b-33">
+                        Contact Us
+                    </h4>
+
+                    <ul class="m-b-70">
+                        <li class="txt14 m-b-14">
+                            <i class="fa fa-map-marker fs-16 dis-inline-block size19" aria-hidden="true"></i>
+
+                        </li>
+
+                        <li class="txt14 m-b-14">
+                            <i class="fa fa-phone fs-16 dis-inline-block size19" aria-hidden="true"></i>
+                            +254 7453 98790
+                        </li>
+
+                        <li class="txt14 m-b-14">
+                            <i class="fa fa-envelope fs-13 dis-inline-block size19" aria-hidden="true"></i>
+                            sutie.com
+                        </li>
+                    </ul>
+
+                    <!-- - -->
+                    <h4 class="txt13 m-b-32">
+                        Opening Times
+                    </h4>
+
+                    <ul>
+                        <li class="txt14">
+                            09:30 AM – 5:00 PM
+                        </li>
+
+                        <li class="txt14">
+                            Every Day
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-md-4 p-t-50">
+                    <!-- - -->
+                    <h4 class="txt13 m-b-33">
+                        Latest twitter
+                    </h4>
+
+                    <div class="m-b-25">
+                        <span class="fs-13 color2 m-r-5">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </span>
+                        <a href="#" class="txt15">
+
+                        </a>
+
+
+
+                        <span class="txt16">
+
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="fs-13 color2 m-r-5">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </span>
+                        <a href="#" class="txt15">
+
+                        </a>
+
+
+
+                        <span class="txt16">
+                            21 June 2020
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 p-t-50">
+                    <!-- - -->
+                    <h4 class="txt13 m-b-38">
+                        Gallery
+                    </h4>
+
+                    <!-- Gallery footer -->
+                    <div class="wrap-gallery-footer flex-w">
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-01.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="images/photo-gallery-thumb-01.jpg" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-02.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="images/photo-gallery-thumb-02.jpg" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-03.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="images/photo-gallery-thumb-03.jpg" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-04.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="images/photo-gallery-thumb-04.jpg" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-05.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="images/photo-gallery-thumb-05.jpg" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-06.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="images/photo-gallery-thumb-06.jpg" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-07.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="images/photo-gallery-thumb-07.jpg" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-08.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="images/photo-gallery-thumb-08.jpg" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-09.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="images/photo-gallery-thumb-09.jpg" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-10.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="images/photo-gallery-thumb-10.jpg" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-11.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="images/photo-gallery-thumb-11.jpg" alt="GALLERY">
+                        </a>
+
+                        <a class="item-gallery-footer wrap-pic-w" href="images/photo-gallery-12.jpg"
+                            data-lightbox="gallery-footer">
+                            <img src="images/photo-gallery-thumb-12.jpg" alt="GALLERY">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="end-footer bg2">
+            <div class="container">
+                <div class="flex-sb-m flex-w p-t-22 p-b-22">
+                    <div class="p-t-5 p-b-5">
+                        <a href="tripadvisor.com" class="fs-15 c-white"><i class="fa fa-tripadvisor"
+                                aria-hidden="true"></i></a>
+                        <a href="facebook.com" class="fs-15 c-white"><i class="fa fa-facebook m-l-18"
+                                aria-hidden="true"></i></a>
+                        <a href="twitter.com" class="fs-15 c-white"><i class="fa fa-twitter m-l-18"
+                                aria-hidden="true"></i></a>
+                    </div>
+
+                    <div class="txt17 p-r-20 p-t-5 p-b-5">
+                        Copyright &copy; 2020 All rights reserved <i class="fa fa-heart"></i> by <a
+                            href="https://colorlib.com" target="_blank">Sutie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to top -->
+    <div class="btn-back-to-top bg0-hov" id="myBtn">
+        <span class="symbol-btn-back-to-top">
+            <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+        </span>
+    </div>
+
+
+    <!--===============================================================================================-->
+    <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
+    <script type='text/javascript' src='js/dynamicpage.js'></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/slick-custom.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/parallax100/parallax100.js"></script>
+    <script type="text/javascript">
+        $('.parallax100').parallax100();
+    </script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+    <!--===============================================================================================-->
+    <script type="text/javascript" src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+    
+
+</body>
+
+</html>

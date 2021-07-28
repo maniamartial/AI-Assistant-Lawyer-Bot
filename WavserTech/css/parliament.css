@@ -1,0 +1,86 @@
+.parliamentary-debates {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.upper-headers {
+  display: flex;
+  flex-wrap: wrap;
+}
+.upper-headers div {
+  margin-top: 5px;
+}
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+}
+.search-content {
+  margin-left: 12%;
+}
+.search-content input {
+  height: 35px;
+}
+.search-content button {
+  height: 35px;
+}
+.fourzones {
+  color: black;
+}
+.fourzones p {
+  font-size: 20px;
+}
+.fourzones div:first {
+  margin-top: 20px;
+}
+.rows {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 2px rgb(248, 3, 3) solid;
+  width: fit;
+}
+.rows div {
+  padding-left: 5%;
+
+  flex-wrap: wrap;
+  border-right: 2px red solid;
+}
+.rows div h4 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.topic {
+  height: auto;
+  width: 25%;
+}
+.attendees {
+  width: 25%;
+}
+.duration {
+  width: 18%;
+}
+.attendee-speaker {
+  width: 30%;
+}
+.courts-link {
+  margin-left: 3%;
+}
+.courts-link a {
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .fourzones h4 {
+    font-size: 15px;
+  }
+  .rows div {
+    padding-left: 1px;
+    padding-right: 5px;
+  }
+  .fourzones p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .rows {
+    width: 450px;
+  }
+}

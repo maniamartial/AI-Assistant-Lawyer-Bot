@@ -1,0 +1,110 @@
+.court-wrap {
+  color: black;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.court-wrap h1 {
+  padding-bottom: 20px;
+}
+.courts {
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+}
+.courts div {
+  width: 50%;
+  border: 2px black solid;
+  display: block;
+}
+.court-div {
+  display: block;
+}
+
+.court-section-first {
+  text-decoration: underline;
+}
+
+/*functionality of each court specified*/
+.court-functionlity {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.single-function {
+  display: flex;
+  border: 2px black solid;
+  margin-bottom: 5%;
+}
+.section-one {
+  width: 50%;
+  height: auto;
+}
+.section-two {
+  background-color: transparent;
+  font-size: 20px;
+  width: 50%;
+  height: auto;
+}
+.section-two button {
+  padding-top: 5px;
+}
+.court-function-head {
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  position: absolute;
+  padding: 12%;
+}
+.court-function-head-hidden {
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  display: none;
+}
+@media (max-width: 700px) {
+  .court-function-head {
+    font-size: 30px;
+  }
+  .single-function {
+    text-align: center;
+  }
+  .section-two {
+    font-size: 16px;
+    width: 50%;
+  }
+}
+@media (max-width: 400px) {
+  .section-one {
+    display: none;
+  }
+  .court-function-head-hidden {
+    display: block;
+  }
+}
+
+/*Subordinates */
+.sub-courts-wrap {
+  margin: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.single-courts {
+  width: fit-content;
+  margin-top: 5%;
+}
+.main-sub-sections {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 2px white solid;
+}
+.main-sub-sections div {
+  border: 1px gold solid;
+  border-bottom: none;
+}
+.single-courts h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.margin-start {
+  padding-left: 0px;
+}

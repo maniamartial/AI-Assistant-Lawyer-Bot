@@ -1,0 +1,52 @@
+.center {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+}
+.teamheader {
+  word-spacing: 5px;
+  font-family: Montserrat;
+  font-size: 45px;
+  color: rgb(248, 41, 4);
+  margin: 20px;
+}
+.teamdiv {
+  background: linear-gradient(to right, #ffd700, white, #9f94e0);
+}
+.teamrow {
+  display: block;
+}
+.row1,
+.row2 {
+  display: flex;
+}
+.team1 {
+  display: block;
+  background-color: transparent;
+  height: 300px;
+  width: 250px;
+  margin: 5px;
+  margin-left: 100px;
+}
+.image {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: black;
+}
+.image1 {
+  border-radius: 50%;
+}
+@media (max-width: 800px) {
+  .row2 {
+    visibility: false;
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .row1 {
+    display: block;
+  }
+}

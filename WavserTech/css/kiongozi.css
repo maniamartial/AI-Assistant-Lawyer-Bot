@@ -1,0 +1,27 @@
+/*
+Borrowed the format from teh parliamentary four-zones rows
+*/
+.topic-sample {
+  display: block;
+  height: fit-content;
+}
+.parliamentary-debates {
+  margin-top: 30px;
+}
+.political-image {
+  height: 250px;
+  width: 90%;
+}
+.rows p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+@media (max-width: 700px) {
+  .political-image {
+    height: 100px;
+  }
+}
+select {
+  width: 150px;
+  height: 30px;
+}
