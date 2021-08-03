@@ -28,6 +28,11 @@ event.preventDefault();
 const msgText = msgerInput.value;
 if (!msgText) return;
 
+/*const msgText = msgerInput.value;
+for(var i=0;i<BOT_MSGS.length;i++){
+  if(msgText in BOT_MSGS[i]) return msgText+""+BOT_MSGS[i];
+}
+*/
 appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
 msgerInput.value = "";
 
@@ -55,17 +60,12 @@ msgerChat.insertAdjacentHTML("beforeend", msgHTML);
 msgerChat.scrollTop += 500;
 }
 
+
+
 function botResponse() {
 const r = random(0, BOT_MSGS.length - 1);
-const msgText = BOT_MSGS[r];
-/*const r=document.getElementById("transcript").value;
-const msgText;
-if(r in BOT_MSGS){
-  msgText=BOT_MSGS[r];
-}
-else{
-  msgText="I dont know";
-}*/
+const msgText=BOT_MSGS[r]
+
 const delay = msgText.split(" ").length * 100;
 
 setTimeout(() => {
