@@ -1653,3 +1653,13 @@ body {
   height: 20px;
   background-color: white;
 }
+
+/*THe games page*/
+.driver {
+  min-width: 50%;
+  margin-left: 0%;
+  height: fit-content;
+}
+.row {
+  padding: 1px;
+}

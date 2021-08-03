@@ -202,19 +202,24 @@ select .yellow {
 .research h2 {
   margin-left: 5%;
 }
-.discussion-table-link {
+.upper-bound a {
   font-size: 24px;
+  margin-left: 70px;
+  color: black;
 }
 .upper-bound {
-  margin-left: 30%;
+  margin-left: 10%;
 }
 @media (max-width: 800px) {
   .upper-bound {
-    margin-left: 10%;
+    margin-left: 5%;
   }
 }
 @media (max-width: 500px) {
   .upper-bound {
-    margin-left: 5%;
+    margin-left: 0px;
+  }
+  .search-content button {
+    width: 35px;
   }
 }

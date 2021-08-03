@@ -1,4 +1,5 @@
 //DOM ELEMENTS FUNCTIONING-speeding the process of loading
+
 if (document.readyState == 'Loading') {
 	document.addEventListener('DOMContentLoaded', ready)
 }
@@ -6,8 +7,6 @@ else {
 	console.log('Its not loading lol, refresh')
 	ready();
 }
-
-
 
 //Little animations on the side
 

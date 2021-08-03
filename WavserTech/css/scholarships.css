@@ -1,0 +1,138 @@
+.wrap-sections {
+  margin: 5%;
+}
+.title-link {
+  font-weight: lighter;
+  font-size: 50px;
+  text-decoration: dotted;
+  font-family: "Abel", sans-serif;
+}
+.sub-cat {
+  margin-top: 20px;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+.tafuta h1 {
+  font-family: "EB Garamond", serif;
+}
+.single-category {
+  margin-bottom: 20px;
+}
+.wrap-single-category {
+  display: flex;
+  flex-wrap: wrap;
+}
+.single-scholarship {
+  width: 250px;
+  min-height: 300px;
+  transition-duration: 1s;
+  margin-top: 10px;
+}
+.scholarship-image {
+  height: 230px;
+  width: 90%;
+  margin-top: 5px;
+}
+.single-scholarship:hover {
+  transform: scale(1.05);
+  border: 1px white solid;
+  border-radius: 2px;
+  box-shadow: 2px 2px rgb(94, 6, 94);
+}
+.single-scholarship:not(:last-child) {
+  margin-right: 10px;
+}
+
+.scholarship-button {
+  background-color: gold;
+  width: 48%;
+}
+.see-all-link {
+  float: right;
+  margin-right: 10%;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: futura;
+}
+.filter {
+  margin-right: 10%;
+  margin-bottom: 3%;
+}
+.parliament-wrap {
+  margin-top: 3%;
+  margin-bottom: -5%;
+}
+@media (max-width: 768px) {
+  .tafuta .search-content {
+    margin-left: 0%;
+  }
+  .see-all-link {
+    margin-right: 23%;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 540px) {
+  .skils .see-all-link {
+    display: none;
+  }
+  .skils .title-link {
+    font-size: 30px;
+  }
+  .skils h2 {
+    font: 25px;
+  }
+  .wrap-sections {
+    margin: 0%;
+  }
+  .title-link {
+    margin-right: 20%;
+  }
+
+  .single-scholarship {
+    width: 160px;
+    min-height: 250px;
+
+    margin-top: 10px;
+  }
+  .scholarship-image {
+    height: 180px;
+  }
+  .see-all-link {
+    float: none;
+    margin-top: 0px;
+    margin-right: 0%;
+  }
+  .wrap-single-category {
+    padding: 5%;
+  }
+}
+@media (max-width: 360px) {
+  .single-scholarship {
+    width: 140px;
+    min-height: 250px;
+  }
+  .scholarship-image {
+    height: 180px;
+  }
+  .title-link {
+    margin-right: 30%;
+  }
+  .see-all-link {
+    float: none;
+    margin-top: 0px;
+    margin-left: -80px;
+  }
+  .single-scholarship:not(:last-child) {
+    margin-right: 3px;
+  }
+}
+@media (max-width: 300px) {
+  .single-category {
+    justify-content: center;
+  }
+  .see-all-link {
+    float: none;
+    margin-top: 0px;
+  }
+}
