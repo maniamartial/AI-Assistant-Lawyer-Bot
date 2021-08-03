@@ -3,10 +3,11 @@
 }
 .title-link {
   font-weight: lighter;
-  font-size: 50px;
+  font-size: 35px;
   text-decoration: dotted;
   font-family: "Abel", sans-serif;
 }
+
 .sub-cat {
   margin-top: 20px;
   text-decoration: underline;
@@ -18,13 +19,16 @@
 .single-category {
   margin-bottom: 20px;
 }
+.scholar .upper-headers {
+  margin-left: 20%;
+}
 .wrap-single-category {
   display: flex;
   flex-wrap: wrap;
 }
 .single-scholarship {
   width: 250px;
-  min-height: 300px;
+  min-height: 320px;
   transition-duration: 1s;
   margin-top: 10px;
 }
@@ -75,6 +79,9 @@
 @media (max-width: 540px) {
   .skils .see-all-link {
     display: none;
+  }
+  .scholar .upper-headers {
+    margin-left: 1%;
   }
   .skils .title-link {
     font-size: 30px;

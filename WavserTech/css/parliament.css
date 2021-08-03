@@ -5,6 +5,7 @@
 .parliamentary-debates h1 {
   margin-top: 20px;
   font-size: 40px;
+  text-transform: uppercase;
 }
 .upper-headers {
   display: flex;
@@ -23,6 +24,7 @@ select {
   height: 35px;
   border: none;
   background: rgba(255, 255, 255, 0.6);
+  padding-left: 10px;
 }
 .search-content {
   margin-left: 12%;
