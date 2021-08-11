@@ -1,0 +1,129 @@
+.islam {
+  height: fit-content;
+  margin-bottom: 20px;
+}
+.islam-three-sections {
+  margin: 1%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.minor-container {
+  min-width: 300px;
+  border-radius: 5px;
+  box-shadow: 2px 1px red;
+  margin-top: 10px;
+}
+.minor-container:not(:last-child) {
+  margin-right: 5px;
+}
+.islam-sidebar-1 {
+  background-color: rgb(247, 244, 244);
+  width: 30%;
+}
+.islam-center {
+  background-color: rgb(247, 244, 244);
+  width: 40%;
+  padding: 20px;
+}
+.islam-sidebar-2 {
+  background-color: rgb(247, 244, 244);
+  width: 25%;
+  min-height: 400px;
+  margin-left: 3%;
+  padding: 20px;
+}
+
+/*Center container*/
+.two-buttons {
+  margin-bottom: 30px;
+}
+.two-buttons button {
+  width: 250px;
+  height: 30px;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+  border-radius: 5px;
+}
+.but-1 {
+  float: left;
+  background-color: none;
+}
+.but-2 {
+  background-color: none;
+}
+.two-buttons button:hover {
+  background-color: gold;
+  color: #9f94e0;
+}
+
+/*Displaying the first sidebar section*/
+/*Now the CSS*/
+
+.pillar ul li {
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /*added for long names*/
+
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  margin: 0 4px 0 -2px;
+}
+.pillar ul li:not(:last-child) {
+  margin-right: 0%;
+}
+.pillar a {
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+ul center {
+  display: flex;
+}
+.pillar li a:hover,
+.pillar-button:hover,
+.pillar li a:hover + ul li a {
+  background: gold;
+  color: #000;
+  border: 1px solid #94a0b4;
+}
+.pillar .pillar-button,
+.pillar-iman .pillar-button {
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+.pillar-iman .pillar-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pillar-wrap {
+  min-height: 180px;
+  border-bottom: 1px black solid;
+  width: 100%;
+}
+.pillar-iman {
+  padding: 20px;
+  border-bottom: 1px black solid;
+}
+.iman li {
+  margin-bottom: 10px;
+}
