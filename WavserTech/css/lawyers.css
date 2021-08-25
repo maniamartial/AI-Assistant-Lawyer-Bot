@@ -12,6 +12,9 @@
   min-height: 130px;
   width: 90%;
 }
+.laws .scholarship-image {
+  border-radius: 2%;
+}
 .law {
   overflow: hidden;
 }
